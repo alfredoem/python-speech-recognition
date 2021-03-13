@@ -2,13 +2,21 @@
 
 Run computer commands by voice 
 
+#### Running with Docker
+
+```
+make build
+make start
+```
+
+#### Running Locally
 #### System Requirements
 * Python3
 * Pip3
 * Python Audio
 * Python Virtual env
 
-#### Installation
+#### Local Installation
 ```
 sudo apt-get install python3-pyaudio
 ```

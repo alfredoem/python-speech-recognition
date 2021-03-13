@@ -27,7 +27,7 @@ def command(value):
         os.system("/usr/bin/gnome-calculator")
     else:
         comm = normalized.split(' ')[-1]
-        print('Trying to run unhandled command: ' + comm)
+        print('Trying to open program: ' + comm)
         if not (os.path.exists('/usr/bin/' + comm)):
             complete = False
             computer_unable()
@@ -60,10 +60,8 @@ def computer_unable():
 while True:
     print('Channel open...')
     with sr.Microphone() as source:
-        # read the audio data from the default microphone
-        audio_data = r.record(source, duration=3)
-        print("Recognizing...")
-        # convert speech to text
+        audio_data = r.record(source, duration=4)
+        print("Listening finish...")
         text = r.recognize_google(audio_data, language=speech_lang, show_all=True)
         print('Google recognized text')
         print(text)
